@@ -1,0 +1,86 @@
+﻿@model IEnumerable<WebA.Models.Pay>
+
+@{
+    ViewData["Title"] = "本期繳費";
+}
+
+<style>
+    body {
+        background-color: #fff7df; /* 替换为你需要的背景颜色 */
+    }
+
+    .center {
+        display: flex;
+        justify-content: center; /* 將內容水平置中 */
+    }
+
+    .table {
+        width: auto; /* 设置为 auto 以适应内容宽度 */
+        border-collapse: collapse;
+        background-color: #FFE183; /* 表格背景颜色 */
+        margin: 0 auto; /* 水平居中 */
+    }
+
+    .custom-h5 {
+        border: 2px solid #FFA629; /* 设置边框颜色和粗细 */
+        background-color: #FFA629; /* 设置背景颜色 */
+        color: black; /* 设置文字颜色 */
+        padding: 10px; /* 添加内边距 */
+        text-align: center; /* 使文本居中 */
+        border-radius: 5px; /* 添加圆角 */
+        display: inline-block; /* 使元素的宽度适应内容 */
+        margin: 20px auto; /* 添加上下外边距，并水平居中 */
+        font-weight: bold;
+    }
+
+    .download-link {
+        color: #FFA629;
+        text-decoration: none;
+        font-weight: bold;
+    }
+
+        .download-link:hover {
+            text-decoration: underline;
+        }
+
+    .container {
+        text-align: center;
+    }
+</style>
+<div style="margin-bottom: 10px;">
+    <img src="/img/toppay.jpg" alt="繳費上" style="display: block; width: 100%; height: auto;">
+</div>
+<div class="table-wrapper center">
+    <table class="table">
+        <tbody>
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <td>
+                        @if (item.ImageData != null && item.ImageData.Length > 0)
+                        {
+                            <a href="data:@item.ImageMimeType;base64,@Convert.ToBase64String(item.ImageData)" download="image.jpg">
+                                <img src="data:@item.ImageMimeType;base64,@Convert.ToBase64String(item.ImageData)" width="300" height="300" />
+                            </a>
+                            <div style="text-align: center; margin-top: 5px;">
+                                <a href="data:@item.ImageMimeType;base64,@Convert.ToBase64String(item.ImageData)" download="image.jpg" class="download-link">下載圖片</a>
+                            </div>
+
+                        }
+                        else
+                        {
+                            <span>No image available</span>
+                        }
+
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>
+
+<div class="container">
+    <h5 class="custom-h5">
+        記得繳費喔!!
+    </h5>
+</div>

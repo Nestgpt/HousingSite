@@ -1,0 +1,268 @@
+﻿@model WebA.Models.RollcallStudent
+
+@{
+    ViewData["Title"] = "Create";
+}
+
+<h1>點名</h1>
+<hr />
+
+<img src="~/images/NEST_RollcallPhoto.png" id="topdesign">
+
+@section Scripts {
+    @{
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+    }
+}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>顯示經緯度</title>
+
+    <!-- 為了確保在不同瀏覽器中的相容性，載入 polyfill -->
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
+
+    <style>
+        #topdesign {
+            width: 100%;
+        }
+
+        #map {
+            position: relative;
+            top: 30%;
+            transform: translate(2.5%,2%);
+            width: 90%;
+            height: 450px;
+            left: 5%;
+        }
+
+        .custom-map-control-button {
+            position: relative;
+            top: 0px;
+            left: 50%;
+            transform: translateX(-50%);
+            background-color: #f4c349;
+            border: none;
+            outline: none;
+            width: 90px;
+            height: 35px;
+            font-size: 14px;
+            font-weight: bold;
+            cursor: pointer;
+            border-radius: 8px;
+        }
+
+        .btn-primary {
+            position: relative;
+            top: 130%;
+            left: 25%;
+            transform: translate(50%,50%);
+            background-color: #f4c349;
+            border: none;
+            outline: none;
+            width: 80px;
+            height: 35px;
+            font-size: 14px;
+            font-weight: bold;
+            cursor: pointer;
+            border-radius: 8px;
+            color: black;
+        }
+
+        #dash {
+            background-color: #fff7df;
+        }
+
+        #LocationDetail {
+            position: relative;
+            top: 180%;
+            left: 7%;
+        }
+
+        #NoBox {
+            background-color: #ffe183;
+            border: none;
+            outline: none;
+            width: 100%;
+            text-align: center;
+        }
+
+        #StatusBox {
+            background-color: #ffe183;
+            border: none;
+            outline: none;
+            width: 100%;
+            text-align:center;
+        }
+
+        #TimeBox {
+            background-color: #ffe183;
+            border: none;
+            outline: none;
+            width: 100%;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <!-- 獨立的驗證位置按鈕 -->
+    <button id="locationButton" class="custom-map-control-button">驗證位置</button>
+    <!-- 地圖容器的 div 元素 -->
+    <div id="map-container">
+        <div id="map"></div>
+    </div>
+    <hr id="dash" />
+
+    <!-- 異步載入 Google Maps API 並初始化地圖 -->
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDj7N8ulS6-cra4KxE-iyxsTWnkZGcP-ME&callback=initMap" async defer></script>
+
+    <script>
+        let map, infoWindow, marker;
+        let bounds; // 用來存放範圍的變數
+        let rangePolygon; // 用來存放範圍多邊形的變數
+
+        // 初始化並添加地圖
+        function initMap() {
+            // 創建一個以給定座標為中心的地圖
+            map = new google.maps.Map(document.getElementById("map"), {
+                center: { lat: 24.983729, lng: 121.341384 }, // 地圖中心位置設為某個預設位置
+                zoom: 18, // 設定縮放級別
+            });
+            infoWindow = new google.maps.InfoWindow(); // 創建資訊視窗
+
+            // 設定範圍和多邊形的點
+            bounds = new google.maps.LatLngBounds();
+            const points = [
+                { lat: 24.98372912723182, lng: 121.34138469152981 },
+                { lat: 24.98341086872474, lng: 121.34165747890631 },
+                { lat: 24.983677716297993, lng: 121.34201804439901 },
+                { lat: 24.983983243550362, lng: 121.34173714968877 }
+            ];
+            points.forEach(function (point) {
+                bounds.extend(point); // 擴展範圍以包含每個點
+                new google.maps.Marker({
+                    position: point, // 設定標記的位置
+                    map: map // 設定標記要顯示的地圖
+                });
+            });
+
+            // 繪製範圍多邊形
+            rangePolygon = new google.maps.Polygon({
+                paths: points,
+                strokeColor: "#FF0000",
+                strokeOpacity: 0.8,
+                strokeWeight: 2,
+                fillColor: "#FF0000",
+                fillOpacity: 0.35,
+            });
+            rangePolygon.setMap(map); // 在地圖上顯示多邊形
+        }
+
+        // 位置按鈕的點擊事件處理函數
+        function handleLocationButtonClick() {
+            if (navigator.geolocation) {
+                navigator.geolocation.getCurrentPosition(
+                    (position) => {
+                        const pos = {
+                            lat: position.coords.latitude,
+                            lng: position.coords.longitude,
+                        };
+
+                        // 取得目前時間並格式化
+                        const now = new Date();
+                        const year = now.getFullYear();
+                        const month = String(now.getMonth() + 1).padStart(2, '0');
+                        const day = String(now.getDate()).padStart(2, '0');
+                        const hours = String(now.getHours()).padStart(2, '0');
+                        const minutes = String(now.getMinutes()).padStart(2, '0');
+                        const seconds = String(now.getSeconds()).padStart(2, '0');
+                        const formattedDatetime = `${year}-${month}-${day} ${hours}:${minutes}:${seconds}`;
+
+                        // 檢查使用者的位置是否在範圍內
+                        let rollcallStatus;
+                        if (bounds.contains(pos)) {
+                            rollcallStatus = "點名成功";
+                        } else {
+                            rollcallStatus = "點名失敗";
+                        }
+
+                        // 設定隱藏的輸入框的值
+                        document.getElementById('StatusBox').value = rollcallStatus;
+                        document.getElementById('TimeBox').value = formattedDatetime;
+
+                        // 清除現有的標記
+                        if (marker) {
+                            marker.setMap(null);
+                        }
+
+                        // 在目前位置建立一個新標記
+                        marker = new google.maps.Marker({
+                            position: pos,
+                            map: map,
+                            title: "You are here",
+                        });
+
+                        infoWindow.setPosition(pos); // 設定資訊視窗的位置
+                        infoWindow.setContent("你在這"); // 設定資訊視窗的內容
+                        infoWindow.open(map); // 開啟資訊視窗
+                        map.setCenter(pos); // 將地圖中心設為目前位置
+                    },
+                    () => {
+                        handleLocationError(true, infoWindow, map.getCenter());
+                    }
+                );
+            } else {
+                // 如果瀏覽器不支援地理位置功能
+                handleLocationError(false, infoWindow, map.getCenter());
+            }
+        }
+
+        // 地理位置錯誤處理函數
+        function handleLocationError(browserHasGeolocation, infoWindow, pos) {
+            infoWindow.setPosition(pos); // 設定資訊視窗的位置
+            infoWindow.setContent(
+                browserHasGeolocation
+                    ? "Error: The Geolocation service failed."
+                    : "Error: Your browser doesn't support geolocation."
+            );
+            infoWindow.open(map); // 開啟資訊視窗
+        }
+
+        // 監聽位置按鈕的點擊事件
+        window.onload = function () {
+            document.getElementById("locationButton").addEventListener("click", handleLocationButtonClick);
+        };
+    </script>
+
+    <div class="row" id="LocationDetail">
+        <div class="col-md-4">
+            <form asp-action="Create" id="rollcallForm">
+                <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+
+                <div class="form-group">
+                    <label asp-for="StudentId" class="control-label">學號</label>
+                    <input asp-for="StudentId" class="form-control" id="NoBox" />
+                    <span asp-validation-for="StudentId" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="Rollcall" class="control-label">狀態</label>
+                    <input asp-for="Rollcall" class="form-control" readonly id="StatusBox" />
+                    <span asp-validation-for="Rollcall" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="Datetime" class="control-label">時間</label>
+                    <input asp-for="Datetime" class="form-control" readonly id="TimeBox" />
+                    <span asp-validation-for="Datetime" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <input type="submit" value="送出" class="btn btn-primary" />
+                    <a asp-action="Index">Back to List</a>
+                </div>
+            </form>
+        </div>
+    </div>
+</body>
+</html>

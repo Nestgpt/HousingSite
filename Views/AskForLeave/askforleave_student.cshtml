@@ -1,0 +1,51 @@
+﻿@model IEnumerable<WebA.Models.AskForLeave>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>外宿表單狀態</h1>
+
+
+<p>
+    <a asp-action="Create">填寫外宿表單</a>
+</p>
+
+@*<button onclick="location.href='@Url.Action("Privacy", "Home")'" class="btn btn-primary">表單目錄</button>*@
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Reason)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Date)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.SelectedOption)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            
+            <td>
+                @Html.DisplayFor(modelItem => item.Reason)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Date)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.SelectedOption)
+            </td>
+            <td>
+                    <a asp-action="Edit" asp-route-id="@item.AskForLeaveId">編輯</a> |
+                    <a asp-action="Details" asp-route-id="@item.AskForLeaveId">內容</a> |
+                    <a asp-action="Delete" asp-route-id="@item.AskForLeaveId">刪除</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

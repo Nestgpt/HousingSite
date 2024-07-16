@@ -1,0 +1,70 @@
+﻿<style>
+    body {
+        background-color: #fff7df;
+    }
+
+    .container {
+        position: relative;
+        display: inline-block;
+        width: 100%;
+    }
+
+    .image-container img {
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+        margin-bottom: 15px; /* 将margin-bottom应用到img上 */
+    }
+
+    .image-container:hover img {
+        transform: scale(1.05);
+        box-shadow: 0 1px 2px rgba(0, 0, 0, 0.5);
+    }
+
+    .bell-icon {
+        position: absolute;
+        top: 0px;
+        left: 5px;
+        width: 35px;
+        height: 35px;
+        cursor: pointer;
+        z-index: 1; /* 保證鈴鐺在topnest圖片的上一層 */
+        transition: transform 0.4s; /* 設置過渡效果 */
+    }
+
+        .bell-icon.flipped {
+            transform: rotateY(180deg); /* 設置翻轉效果 */
+        }
+</style>
+
+<div class="container">
+    <img src="/img/bell.png" alt="鈴鐺" class="bell-icon" onclick="flipBell();">
+    <img src="/img/topnest.jpg" alt="上" style="display: block; width: 100%; height: auto;margin-left: 5px;">
+</div>
+<div style="margin-left: 12px; margin-top: 30px;">
+    <div class="image-container" style="position: relative; display: inline-block; margin-left: 18px;">
+        <img src="/img/personal information.png" alt="個人資料">
+    </div>
+    <div class="image-container" style="position: relative; display: inline-block; margin-left: 18px;">
+        <img src="/img/online roll call.png" alt="線上點名">
+    </div>
+    <div class="image-container" style="position: relative; display: inline-block; margin-left: 18px;">
+        <img src="/img/write form.png" alt="填寫表單" style="width: 100%; height: auto;" onclick="location.href='@Url.Action("Studentform_page", "Main")';">
+    </div>
+    <div class="image-container" style="position: relative; display: inline-block; margin-left: 18px;">
+        <img src="/img/service status.png" alt="服務狀態" onclick="location.href='@Url.Action("servers_student", "Servers")';">
+    </div>
+    <div class="image-container" style="position: relative; display: inline-block; margin-left: 18px;">
+        <img src="/img/pay online.png" alt="線上繳費" style="width: 100%; height: auto;" onclick="location.href='@Url.Action("pays_student", "pays")';">
+    </div>
+    <div class="image-container" style="position: relative; display: inline-block; margin-left: 18px;">
+        <img src="/img/relevant information.png" alt="相關資訊" onclick="location.href='@Url.Action("Student_related_information", "Main")';">
+    </div>
+</div>
+<script>
+    function flipBell() {
+        var bell = document.querySelector('.bell-icon');
+        bell.classList.add('flipped');
+        setTimeout(function () {
+            location.href = '@Url.Action("HousemasterAnnouncement", "Announcements")';
+        }, 400); // 延遲與動畫持續時間匹配
+    }
+</script>

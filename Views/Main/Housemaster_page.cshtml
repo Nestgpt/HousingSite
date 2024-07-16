@@ -1,0 +1,80 @@
+﻿<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+    <meta charset="UTF-8">
+    <style>
+        body {
+            background-color: #fff7df; /* 替換為你需要的背景顏色 */
+        }
+
+        .container {
+            position: relative;
+            display: inline-block;
+            width: 100%;
+        }
+
+        .bell-icon {
+            position: absolute;
+            top: 0px;
+            left: 5px;
+            width: 35px;
+            height: 35px;
+            cursor: pointer;
+            z-index: 1; /* 保證鈴鐺在topnest圖片的上一層 */
+            transition: transform 0.4s; /* 設置過渡效果 */
+        }
+
+        .bell-icon.flipped {
+                transform: rotateY(180deg); /* 設置翻轉效果 */
+         }
+
+        .image-container img {
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            margin-bottom: 15px; /* 將margin-bottom應用到img上 */
+        }
+
+        .image-container:hover img {
+            transform: scale(1.05);
+            box-shadow: 0 0px 0px rgba(0, 0, 0, 0.5);
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <img src="/img/bell.png" alt="鈴鐺" class="bell-icon" onclick="flipBell();">
+        <img src="/img/topnest.jpg" alt="上" style="display: block; width: 100%; height: auto;">
+    </div>
+
+    <div style="margin-bottom: 20px; margin-top: 20px;">
+        <div class="image-container" style="float: left; margin-left: 20px; width: 40%; box-sizing: border-box;">
+            <img src="/img/studentinformation.png" alt="學生資料" style="width: 100%; height: auto;">
+        </div>
+        <div class="image-container" style="float: left; margin-left: 20px; width: 40%; box-sizing: border-box;">
+            <img src="/img/roll call.png" alt="點名" style="width: 100%; height: auto;">
+        </div>
+        <div class="image-container" style="clear: both;"></div>
+    </div>
+    <div class="image-container" style="margin-bottom: 10px;">
+        <img src="/img/sleep over.png" alt="外宿" style="display: block; width: 85%; height: auto; margin-left:25px;" onclick="location.href='@Url.Action("askforleave_housemaster", "AskForLeave")';">
+    </div>
+    <div class="image-container" style="margin-bottom: 10px;">
+        <img src="/img/fixx.png" alt="報修" style="display:block; width: 85%; height: auto; margin-left:25px;" onclick="location.href='@Url.Action("fix_housemaster", "fixes")';">
+    </div>
+    <div class="image-container" style="margin-bottom: 10px;">
+        <img src="/img/complaintt.png" alt="投訴" style="display: block; width: 85%; height: auto; margin-left:25px;" onclick="location.href='@Url.Action("sues_housemaster", "sues")';">
+    </div>
+    <div class="image-container" style="margin-bottom: 10px;">
+        <img src="/img/utilitybills.png" alt="水電費" style="display: block; width: 85%; height: auto; margin-left:25px;" onclick="location.href='@Url.Action("pays_housemaster_photo", "pays")';">
+    </div>
+
+    <script>
+        function flipBell() {
+            var bell = document.querySelector('.bell-icon');
+            bell.classList.add('flipped');
+            setTimeout(function () {
+                location.href = '@Url.Action("HousemasterAnnouncement", "Announcements")';
+            }, 400); // 延遲與動畫持續時間匹配
+        }
+    </script>
+</body>
+</html>

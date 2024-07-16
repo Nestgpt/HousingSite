@@ -1,0 +1,42 @@
+﻿@model WebA.Models.RollcallStudent // 指定視圖的模型為 NEST_5.Models 命名空間下的 RollcallStudent
+
+@{
+    ViewData["Title"] = "Edit"; // 設置視圖的標題為 "Edit"
+}
+
+<h1>Edit</h1> <!-- 頁面標題 -->
+
+<h4>RollCallStudent</h4> <!-- 小標題，表示 RollCallStudent 的編輯部分 -->
+<hr /> <!-- 水平分隔線 -->
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Edit">
+            <!-- 表單提交到 Edit 動作 -->
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div> <!-- 顯示模型驗證總結信息 -->
+            <input type="hidden" asp-for="RollcallId" /> <!-- 隱藏的 RollcallId 字段，用於提交表單時保持 ID 值 -->
+            <div class="form-group">
+                <label asp-for="Rollcall" class="control-label"></label> <!-- Rollcall 屬性的標籤 -->
+                <input asp-for="Rollcall" class="form-control" /> <!-- Rollcall 屬性的輸入框 -->
+                <span asp-validation-for="Rollcall" class="text-danger"></span> <!-- Rollcall 屬性的驗證信息 -->
+            </div>
+            <div class="form-group">
+                <label asp-for="Datetime" class="control-label"></label> <!-- Datetime 屬性的標籤 -->
+                <input asp-for="Datetime" class="form-control" /> <!-- Datetime 屬性的輸入框 -->
+                <span asp-validation-for="Datetime" class="text-danger"></span> <!-- Datetime 屬性的驗證信息 -->
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Save" class="btn btn-primary" /> <!-- 提交按鈕 -->
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a> <!-- 連結回到 RollcallStudent 的列表頁面 -->
+</div>
+
+@section Scripts {
+    @{
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+    }
+}

@@ -1,0 +1,38 @@
+﻿<style>
+    body {
+        background-color: #fff7df; /* 替换为你需要的背景颜色 */
+    }
+
+    .button-container {
+        display: block;
+        width: 85%;
+        height: auto;
+        margin-bottom: 30px; /* 控制按钮间距 */
+    }
+
+        .button-container img {
+            display: block;
+            width: 100%;
+            height: auto;
+            margin-left: 25px;
+            transition: transform 0.3s ease, box-shadow 0.3s ease; /* 添加动画过渡效果 */
+        }
+
+            .button-container img:active {
+                transform: scale(1.05); /* 点击放大图片 */
+                box-shadow: 0 0px 2px rgba(0, 0, 0, 0.5); /* 点击时添加阴影效果 */
+            }
+</style>
+
+<div style="margin-bottom: 20px;">
+    <img src="/img/top.jpg" alt="top" style="display: block; width: 100%; height: auto;">
+</div>
+<div class="button-container" onclick="location.href='@Url.Action("Create", "AskForLeave")';">
+    <img src="/img/sleep form.png" alt="外宿表單">
+</div>
+<div class="button-container" onclick="location.href='@Url.Action("Create", "fixes")';">
+    <img src="/img/fix form.png" alt="報修表單">
+</div>
+<div class="button-container" onclick="location.href='@Url.Action("Create", "sues")';">
+    <img src="/img/complaintform.png" alt="投訴表單">
+</div>

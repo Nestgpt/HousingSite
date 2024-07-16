@@ -1,0 +1,80 @@
+﻿@model IEnumerable<WebA.Models.Announcement>
+
+<style>
+    .announcements-container {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .announcement-box {
+        border: 1px solid #ccc;
+        padding: 20px;
+        position: relative;
+        border-radius: 10px;
+        background-color: #f9f9f9;
+    }
+
+    .announcement-title {
+        position: absolute;
+        top: 10px;
+        left: 10px;
+        font-weight: bold;
+    }
+
+    .announcement-description {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100px;
+        margin: 40px 0;
+        text-align: center;
+    }
+
+    .announcement-date {
+        position: absolute;
+        bottom: 10px;
+        right: 10px;
+        font-size: 0.8em;
+        color: #777;
+    }
+
+    .announcement-actions {
+        display: flex;
+        justify-content: space-around;
+        margin-top: 10px;
+    }
+
+    .create-button {
+        display: block;
+        margin-bottom: 20px;
+        background-color: #007bff;
+        color: white;
+        padding: 10px 20px;
+        text-align: center;
+        text-decoration: none;
+        border-radius: 5px;
+    }
+
+        .create-button:hover {
+            background-color: #0056b3;
+        }
+</style>
+
+<div class="announcements-container">
+    @foreach (var item in Model)
+    {
+        <div class="announcement-box">
+            <div class="announcement-title">
+                @Html.DisplayFor(model => item.Title)
+            </div>
+            <div class="announcement-description">
+                @Html.DisplayFor(model => item.Description)
+            </div>
+            <div class="announcement-date">
+                @Html.DisplayFor(model => item.ReleaseDate)
+            </div>
+            
+        </div>
+    }
+</div>

@@ -1,0 +1,50 @@
+﻿@model IEnumerable<WebA.Models.Sue>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>填寫投訴表單</h1>
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+<button onclick="location.href='@Url.Action("Privacy", "Main")'" class="btn btn-primary">表單目錄</button>
+<!--
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Date)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Reason)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Roomnumber)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Date)
+            </td>
+            <td>
+            @Html.DisplayFor(modelItem => item.Reason)
+            </td>
+            <td>
+            @Html.DisplayFor(modelItem => item.Roomnumber)
+            </td>
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.Id">Edit</a> |
+                <a asp-action="Details" asp-route-id="@item.Id">Details</a> |
+                <a asp-action="Delete" asp-route-id="@item.Id">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>
+-->

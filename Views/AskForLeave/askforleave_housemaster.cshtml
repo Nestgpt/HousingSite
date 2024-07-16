@@ -1,0 +1,172 @@
+﻿@model IEnumerable<WebA.Models.AskForLeave>
+@{
+    ViewData["Title"] = "外宿申請名單";
+}
+
+<style>
+    body {
+        background-color: #fff7df; /* 替换为你需要的背景颜色 */
+    }
+
+    .container {
+        width: 100%; /* 設置容器的寬度 */
+        margin: 0 auto; /* 將容器水平居中 */
+        box-sizing: border-box; /* 确保内边距不会影响元素的宽度 */
+    }
+
+    .header {
+        display: flex;
+        align-items: center;
+        justify-content: flex-start; /* 讓項目靠左對齊 */
+        margin-bottom: 20px; /* 添加底部間距 */
+    }
+
+    h1 {
+        width: 40%; /* 設置標題寬度與容器寬度一致 */
+        color: white; /* 設置字體顏色 */
+        font-size: 15px; /* 設置字體大小 */
+        font-weight: bold; /* 設置文字粗體 */
+        background-color: #7584F2; /* 背景顏色 */
+        padding: 5px; /* 調整 padding */
+        text-align: center; /* 文字居中 */
+        margin: 0; /* 設置上下方間距為0 */
+        box-sizing: border-box; /* 包含 padding 在內的寬度計算 */
+        border-radius: 15px; /* 設置圓弧的半徑 */
+        margin-left: 10px;
+    }
+
+    .filter-buttons {
+        display: flex;
+        gap: 3px; /* 按鈕之間的間距 */
+    }
+
+    .filter-button {
+        width: 40px;
+        margin-left: 20px;
+        font-size: 10px;
+        font-weight: bold;
+        text-align: center;
+        background-color: #7584F2;
+        color: white;
+        padding: 3px;
+        border-radius: 15px;
+        cursor: pointer;
+    }
+
+
+
+    .table {
+        width: 100%; /* 設置表格寬度與容器寬度一致 */
+        margin-top: 0px; /* 設置表格頂部與標題之間的距離 */
+        font-weight: bold; /* 設置文字粗體 */
+        border-collapse: collapse;
+        font-size: 10px; /* 設置字體大小 */
+        text-align: center;
+        box-sizing: border-box; /* 包含 padding 在內的寬度計算 */
+        border: 0px solid #848484; /* 為表格容器設置邊框 */
+        border-radius: 15px; /* 設置表格容器圓角半徑 */
+        overflow: hidden; /* 隱藏超出圓角的部分 */
+        padding: 0; /* 确保内边距不会影响表格宽度 */
+        background-color:white;
+    }
+
+        /* 設置表格的邊框和內邊距 */
+        .table th, .table td {
+            border: 1px solid #7584F2;
+            padding: 6px;
+            text-align: left;
+        }
+
+        /* 設置表頭的背景顏色 */
+        .table th {
+            margin: 0;
+            background-color: #7584F2;
+            color: white;
+        }
+
+
+    img {
+        width: 100%; /* 确保图片宽度100% */
+        height: auto; /* 高度自动调整 */
+        display: block; /* 确保图片作为块元素显示，不与其他元素同行 */
+        margin-bottom: 10px; /* 图片底部间距，避免与下方元素紧贴 */
+    }
+
+    .edit-link {
+        color: #7584F2; /* 設置文字顏色 */
+        text-decoration: none; /* 移除默認的下劃線 */
+    }
+
+        .edit-link:hover {
+            color: red; /* 設置懸停時的文字顏色 */
+            text-decoration: underline; /* 懸停時添加下劃線 */
+        }
+</style>
+
+<div class="container">
+    <img src="/img/topsleepover.png" alt="睡覺">
+    <div class="header">
+        <h1>外宿申請名單</h1>
+        <div class="filter-buttons">
+            <button class="filter-button" onclick="filter('全部')">全部</button>
+            <button class="filter-button" onclick="filter('已核准')">已核准</button>
+            <button class="filter-button" onclick="filter('未核准')">未核准</button>
+        </div>
+    </div>
+    <table class="table">
+        <thead>
+            <tr>
+                <th>
+                    @Html.DisplayName("學號")
+                </th>
+                <th>
+                    @Html.DisplayName("外宿日期")
+                </th>
+                <th>
+                    @Html.DisplayName("外宿原因")
+                </th>
+                <th>
+                    @Html.DisplayName("處理狀態")
+                </th>
+                <th></th>
+            </tr>
+        </thead>
+        <tbody id="askforleave-list">
+            @foreach (var item in Model.OrderBy(m => m.Date))
+            {
+                <tr>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.StudentId)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Date)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Reason)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.SelectedOption)
+                    </td>
+                    <td>
+                        <a asp-action="Edit" asp-route-id="@item.AskForLeaveId">編輯狀態</a>
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>
+@section Scripts {
+    <script>
+        function filter(status) {
+            const rows = document.querySelectorAll('#askforleave-list tr');
+            rows.forEach(row => {
+                const statusCell = row.querySelector('td:nth-child(4)').textContent.trim(); // 注意这里修改为第三列的内容
+                if (status === '全部' || statusCell === status) {
+                    row.style.display = '';
+                } else {
+                    row.style.display = 'none';
+                }
+            });
+        }
+    </script>
+}

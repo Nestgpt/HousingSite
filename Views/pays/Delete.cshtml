@@ -1,0 +1,52 @@
+﻿@model WebA.Models.Pay
+
+@{
+    ViewData["Title"] = "Delete";
+}
+<style>
+    body {
+        background-color: #fff7df; /* 替换为你需要的背景颜色 */
+    }
+
+    .custom-btn {
+        background-color: #FFA629;
+        border-color: #FFA629;
+        color: black;
+        margin-top: 50px;
+        font-weight: bold; /* 設置文字粗體 */
+        /* 添加其他样式 */
+    }
+
+    .btn-primary {
+        position: absolute;
+        background-color: #FFA629;
+        border-color: #FFA629;
+        color: black;
+        top: 141.5px;
+        left: 47px;
+        font-weight: bold; /* 設置文字粗體 */
+        /* 添加其他样式 */
+    }
+
+    .custom-h4 {
+        font-weight:bold;
+     
+    }
+
+  
+
+</style>
+<h5 class="custom-h4">
+    確定刪除?
+</h5>
+
+
+<div>
+    <form asp-action="Delete">
+        <input type="hidden" asp-for="Id" />
+        <input type="submit" value="是" class="btn btn-danger custom-btn" /> 
+        
+    </form>
+</div>
+<button onclick="location.href='@Url.Action("pays_horsemaster", "pays")'" class="btn btn-primary">否</button>
+

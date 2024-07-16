@@ -1,0 +1,86 @@
+﻿@model WebA.Models.Sue
+
+@{
+    ViewData["Title"] = "Create";
+}
+    <style>
+        body {
+            background-color: #fff7df; /* 替换为你需要的背景颜色 */
+        }
+
+        .custom-label {
+            border: 5px solid #FFCD29;
+            background-color: #df0112;
+            color: white;
+            padding: 6px;
+            font-weight: bold;
+            border-radius: 5px; /* 添加圆角 */
+            margin-bottom: 10px;
+            margin-left: 28px;
+            border-radius: 20px;
+        }
+
+        .form-control {
+            border: 1px solid #FFE183;
+            background-color: #FFE183;
+            padding: 5px;
+            font-weight: bold;
+            width: 85%; /* 设置输入框宽度为父元素的 80% */
+            margin-left: 28px;
+            border-radius: 20px;
+            box-shadow: 3px 3px 5px rgba(0,0,0,0.3),-3px -3px 5px rgba(255,255,255,0.8);
+        }
+
+        .form-group {
+            margin-bottom: 20px; /* 添加表单组之间的底部间距 */
+        }
+
+        .custom-button {
+            margin-top: 18px;
+            background-color: #df0112; /* 设置按钮的背景色 */
+            border-radius: 20px;
+            font-weight: bold;
+            color: white; /* 设置按钮的文字颜色 */
+            margin-left: 145px;
+            border: 5px solid #FFCD29; /* 橘色边框 */
+        }
+
+    </style>
+<div style="margin-bottom: 10px;">
+    <img src="/img/italic nest.jpg" alt="斜nest" style="display: block; width: 100%; height: auto;">
+</div>
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Create">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="Date" class="control-label custom-label">投訴日期</label>
+                <input asp-for="Date" class="form-control" />
+                <span asp-validation-for="Date" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Reason" class="control-label custom-label">投訴原因</label>
+                <input asp-for="Reason" class="form-control" />
+                <span asp-validation-for="Reason" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Roomnumber" class="control-label custom-label">投訴房號</label>
+                <input asp-for="Roomnumber" class="form-control" />
+                <span asp-validation-for="Roomnumber" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-primary custom-button" />
+            </div>
+            <div style="margin-bottom: 20px;">
+                <img src="/img/icon.jpg" alt="icon" style="display: block; position: fixed;
+            bottom: 10px;right: 10px;margin-left:10px; width: 35%; height: auto;">
+            </div>
+        </form>
+    </div>
+</div>
+
+
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

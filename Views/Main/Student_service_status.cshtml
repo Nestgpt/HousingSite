@@ -1,0 +1,59 @@
+﻿<style>
+    body {
+        background-color: #fff7df; /* 替换为你需要的背景颜色 */
+    }
+<!--
+    .button-container {
+        position: relative;
+        display: inline-block;
+        width: 30%;
+        height: auto;
+       
+        margin-right: 100px;
+    }
+
+     .button-container img {
+            display: inline-block;
+            width: 100%;
+            height: auto;
+        }
+        -->
+</style>
+<div>
+    <div>
+        <img src="/img/topserver.png" alt="top" style="display: block; margin-bottom:30px; width: 100%; height: auto;">
+    </div>
+    <div style="display: flex; flex-wrap: wrap; gap: 10px;">
+        <div style="flex: 1 1 45%; max-width: 45%;">
+            <img src="/img/sleepoverserver.png" alt="填寫表單" style="width: 85%; margin-left:23px; height: auto; padding: 10px;" onclick="location.href='@Url.Action("servers_student", "Servers")';">
+        </div>
+        <div style="flex: 1 1 45%; max-width: 45%;">
+            <img src="/img/fixserver.png" alt="填寫表單" style="width: 85%; margin-left:23px; height: auto; padding: 10px;" onclick="location.href='@Url.Action("servers_student", "Servers")';">
+        </div>
+        <div style="flex: 1 1 45%; max-width: 45%;">
+            <img src="/img/complaintserver.png" alt="填寫表單" style="width: 85%; margin-left:23px; height: auto; padding: 10px;" onclick="location.href='@Url.Action("servers_student", "Servers")';">
+        </div>
+        <div style="flex: 1 1 45%; max-width: 45%;">
+            <img src="/img/payserver.png" alt="填寫表單" style="width: 85%; margin-left:23px; height: auto; padding: 10px;" onclick="location.href='@Url.Action("servers_student", "Servers")';">
+        </div>
+    </div>
+</div>
+
+
+
+
+@*
+<div class="button-container" onclick="location.href='@Url.Action("Index", "Servers")';">
+    <img src="/img/sleepoverserver.png" alt="top">
+</div>
+<div class="button-container" onclick="location.href='@Url.Action("Index", "Servers")';">
+    <img src="/img/fixserver.png" alt="top" >
+</div>
+<div class="button-container" onclick="location.href='@Url.Action("Index", "Servers")';">
+    <img src="/img/complaintserver.png" alt="top" >
+</div>
+
+<div class="button-container" onclick="location.href='@Url.Action("Index", "Servers")';">
+    <img src="/img/payserver.png" alt="投訴表單">
+</div>
+*@

@@ -1,0 +1,148 @@
+﻿@model WebA.Models.Server
+
+@{
+    ViewData["Title"] = "Edit";
+}
+
+<style>
+    body {
+        background-color: #fff7df; /* 替换为你需要的背景颜色 */
+    }
+
+    .custom-label {
+        border: 1px solid #FFE183;
+        background-color: #FFE183;
+        padding: 10px;
+        font-weight: bold;
+        border-radius: 5px; /* 添加圆角 */
+        margin-bottom: 10px;
+        margin-left: 28px;
+        border-radius: 20px;
+    }
+
+    .form-control {
+        border: 1px solid #FFE183;
+        background-color: #FFE183;
+        padding: 5px;
+        font-weight: bold;
+        width: 85%; /* 设置输入框宽度为父元素的 80% */
+        margin-left: 28px;
+        border-radius: 20px;
+        box-shadow: 3px 3px 5px rgba(0,0,0,0.3),-3px -3px 5px rgba(255,255,255,0.8);
+    }
+
+    .form-group {
+        margin-bottom: 20px; /* 添加表单组之间的底部间距 */
+    }
+
+    .custom-button {
+        margin-top: 20px;
+        margin-bottom: 20px; /* 新增：增加按钮与表单组之间的距离 */
+        background-color: #fff7df; /* 设置按钮的背景色 */
+        border-radius: 20px;
+        font-weight: bold;
+        color: black; /* 设置按钮的文字颜色 */
+        margin-left: 145px;
+        border: 5px solid #FFCD29; /* 橘色边框 */
+    }
+
+</style>
+
+<div style="margin-bottom: 20px;">
+    <img src="/img/toprenewpay.jpg" alt="更新繳費上" style="display: block; width: 100%; height: auto;">
+</div>
+
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Edit">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <input type="hidden" asp-for="Id" />
+            <!--
+            <div class="form-group">
+                <label asp-for="Title" class="control-label"></label>
+                <input asp-for="Title" class="form-control" />
+                <span asp-validation-for="Title" class="text-danger"></span>
+            </div>
+            -->
+            <div class="form-group">
+                <label asp-for="Date" class="control-label custom-label">繳費日期</label>
+                <input asp-for="Date" class="form-control" />
+                <span asp-validation-for="Date" class="text-danger"></span>
+            </div>
+
+            <div class="form-group">
+                <label asp-for="SelectedOption" class="control-label custom-label">繳費狀態</label>
+                <select asp-for="SelectedOption" class="form-control">
+                    <!-- 在這裡加入你的選項 -->
+                    @*<option value="未處理" selected>未處理</option>*@
+                    <option value="已繳費">已繳費</option>
+                    <option value="未繳費">未繳費</option>
+                    <!-- 更多選項... -->
+                </select>
+                <span asp-validation-for="SelectedOption" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="儲存" class="btn btn-primary custom-button" />
+            </div>
+
+            <div class="form-group">
+                <label asp-for="StudentId" class="control-label custom-label"></label>
+                <input asp-for="StudentId" class="form-control" />
+                <span asp-validation-for="StudentId" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Name" class="control-label custom-label"></label>
+                <input asp-for="Name" class="form-control" />
+                <span asp-validation-for="Name" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Major" class="control-label custom-label"></label>
+                <input asp-for="Major" class="form-control" />
+                <span asp-validation-for="Major" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Grade" class="control-label custom-label"></label>
+                <input asp-for="Grade" class="form-control" />
+                <span asp-validation-for="Grade" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Class" class="control-label custom-label"></label>
+                <input asp-for="Class" class="form-control" />
+                <span asp-validation-for="Class" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Gender" class="control-label custom-label"></label>
+                <input asp-for="Gender" class="form-control" />
+                <span asp-validation-for="Gender" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="PhoneNumber" class="control-label custom-label"></label>
+                <input asp-for="PhoneNumber" class="form-control" />
+                <span asp-validation-for="PhoneNumber" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Idnumber " class="control-label custom-label"></label>
+                <input asp-for="Idnumber " class="form-control" />
+                <span asp-validation-for="Idnumber " class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="InitialPassword" class="control-label custom-label"></label>
+                <input asp-for="InitialPassword" class="form-control" />
+                <span asp-validation-for="InitialPassword" class="text-danger"></span>
+            </div>
+            
+
+
+         
+            
+        </form>
+    </div>
+</div>
+
+
+
+@section Scripts {
+    @{
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+    }
+}

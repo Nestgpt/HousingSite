@@ -1,0 +1,20 @@
+﻿@model IEnumerable<WebA.Models.RollcallStudent>
+
+<tbody>
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Rollcall)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Datetime)
+            </td>
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.RollcallId">修改</a> |
+                <a asp-action="Details" asp-route-id="@item.RollcallId">檢視</a> |
+                <a asp-action="Delete" asp-route-id="@item.RollcallId">刪除</a>
+            </td>
+        </tr>
+    }
+</tbody>

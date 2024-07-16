@@ -1,0 +1,239 @@
+is_global = true
+build_property.TargetFramework = net8.0
+build_property.TargetPlatformMinVersion = 
+build_property.UsingMicrosoftNETSdkWeb = true
+build_property.ProjectTypeGuids = 
+build_property.InvariantGlobalization = 
+build_property.PlatformNeutralAssembly = 
+build_property.EnforceExtendedAnalyzerRules = 
+build_property._SupportedPlatformList = Linux,macOS,Windows
+build_property.RootNamespace = WebA
+build_property.RootNamespace = WebA
+build_property.ProjectDir = C:\Users\kdzhou\Downloads\NEST_1-Chiao\NEST_1-Chiao\WebA\WebA\
+build_property.EnableComHosting = 
+build_property.EnableGeneratedComInterfaceComImportInterop = 
+build_property.RazorLangVersion = 8.0
+build_property.SupportLocalizedComponentNames = 
+build_property.GenerateRazorMetadataSourceChecksumAttributes = 
+build_property.MSBuildProjectDirectory = C:\Users\kdzhou\Downloads\NEST_1-Chiao\NEST_1-Chiao\WebA\WebA
+build_property._RazorSourceGeneratorDebug = 
+
+[C:/Users/kdzhou/Downloads/NEST_1-Chiao/NEST_1-Chiao/WebA/WebA/Views/Announcements/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQW5ub3VuY2VtZW50c1xDcmVhdGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/kdzhou/Downloads/NEST_1-Chiao/NEST_1-Chiao/WebA/WebA/Views/Announcements/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQW5ub3VuY2VtZW50c1xEZWxldGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/kdzhou/Downloads/NEST_1-Chiao/NEST_1-Chiao/WebA/WebA/Views/Announcements/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQW5ub3VuY2VtZW50c1xEZXRhaWxzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/kdzhou/Downloads/NEST_1-Chiao/NEST_1-Chiao/WebA/WebA/Views/Announcements/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQW5ub3VuY2VtZW50c1xFZGl0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/kdzhou/Downloads/NEST_1-Chiao/NEST_1-Chiao/WebA/WebA/Views/Announcements/HousemasterAnnouncement.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQW5ub3VuY2VtZW50c1xIb3VzZW1hc3RlckFubm91bmNlbWVudC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/kdzhou/Downloads/NEST_1-Chiao/NEST_1-Chiao/WebA/WebA/Views/Announcements/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQW5ub3VuY2VtZW50c1xJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/kdzhou/Downloads/NEST_1-Chiao/NEST_1-Chiao/WebA/WebA/Views/Announcements/StudentAnnouncement.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQW5ub3VuY2VtZW50c1xTdHVkZW50QW5ub3VuY2VtZW50LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/kdzhou/Downloads/NEST_1-Chiao/NEST_1-Chiao/WebA/WebA/Views/AskForLeave/askforleave_housemaster.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQXNrRm9yTGVhdmVcYXNrZm9ybGVhdmVfaG91c2VtYXN0ZXIuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/kdzhou/Downloads/NEST_1-Chiao/NEST_1-Chiao/WebA/WebA/Views/AskForLeave/askforleave_student.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQXNrRm9yTGVhdmVcYXNrZm9ybGVhdmVfc3R1ZGVudC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/kdzhou/Downloads/NEST_1-Chiao/NEST_1-Chiao/WebA/WebA/Views/AskForLeave/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQXNrRm9yTGVhdmVcQ3JlYXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/kdzhou/Downloads/NEST_1-Chiao/NEST_1-Chiao/WebA/WebA/Views/AskForLeave/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQXNrRm9yTGVhdmVcRGVsZXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/kdzhou/Downloads/NEST_1-Chiao/NEST_1-Chiao/WebA/WebA/Views/AskForLeave/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQXNrRm9yTGVhdmVcRGV0YWlscy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/kdzhou/Downloads/NEST_1-Chiao/NEST_1-Chiao/WebA/WebA/Views/AskForLeave/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQXNrRm9yTGVhdmVcRWRpdC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/kdzhou/Downloads/NEST_1-Chiao/NEST_1-Chiao/WebA/WebA/Views/fixes/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcZml4ZXNcQ3JlYXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/kdzhou/Downloads/NEST_1-Chiao/NEST_1-Chiao/WebA/WebA/Views/fixes/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcZml4ZXNcRGVsZXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/kdzhou/Downloads/NEST_1-Chiao/NEST_1-Chiao/WebA/WebA/Views/fixes/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcZml4ZXNcRGV0YWlscy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/kdzhou/Downloads/NEST_1-Chiao/NEST_1-Chiao/WebA/WebA/Views/fixes/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcZml4ZXNcRWRpdC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/kdzhou/Downloads/NEST_1-Chiao/NEST_1-Chiao/WebA/WebA/Views/fixes/fix_housemaster.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcZml4ZXNcZml4X2hvdXNlbWFzdGVyLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/kdzhou/Downloads/NEST_1-Chiao/NEST_1-Chiao/WebA/WebA/Views/fixes/fix_student.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcZml4ZXNcZml4X3N0dWRlbnQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/kdzhou/Downloads/NEST_1-Chiao/NEST_1-Chiao/WebA/WebA/Views/Main/Housemaster_page.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTWFpblxIb3VzZW1hc3Rlcl9wYWdlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/kdzhou/Downloads/NEST_1-Chiao/NEST_1-Chiao/WebA/WebA/Views/Main/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTWFpblxJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/kdzhou/Downloads/NEST_1-Chiao/NEST_1-Chiao/WebA/WebA/Views/Main/Studentform_page.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTWFpblxTdHVkZW50Zm9ybV9wYWdlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/kdzhou/Downloads/NEST_1-Chiao/NEST_1-Chiao/WebA/WebA/Views/Main/Student_page.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTWFpblxTdHVkZW50X3BhZ2UuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/kdzhou/Downloads/NEST_1-Chiao/NEST_1-Chiao/WebA/WebA/Views/Main/Student_related_information.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTWFpblxTdHVkZW50X3JlbGF0ZWRfaW5mb3JtYXRpb24uY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/kdzhou/Downloads/NEST_1-Chiao/NEST_1-Chiao/WebA/WebA/Views/Main/Student_service_status.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTWFpblxTdHVkZW50X3NlcnZpY2Vfc3RhdHVzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/kdzhou/Downloads/NEST_1-Chiao/NEST_1-Chiao/WebA/WebA/Views/pays/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NccGF5c1xDcmVhdGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/kdzhou/Downloads/NEST_1-Chiao/NEST_1-Chiao/WebA/WebA/Views/pays/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NccGF5c1xEZWxldGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/kdzhou/Downloads/NEST_1-Chiao/NEST_1-Chiao/WebA/WebA/Views/pays/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NccGF5c1xEZXRhaWxzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/kdzhou/Downloads/NEST_1-Chiao/NEST_1-Chiao/WebA/WebA/Views/pays/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NccGF5c1xFZGl0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/kdzhou/Downloads/NEST_1-Chiao/NEST_1-Chiao/WebA/WebA/Views/pays/pays_housemaster.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NccGF5c1xwYXlzX2hvdXNlbWFzdGVyLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/kdzhou/Downloads/NEST_1-Chiao/NEST_1-Chiao/WebA/WebA/Views/pays/pays_housemaster_photo.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NccGF5c1xwYXlzX2hvdXNlbWFzdGVyX3Bob3RvLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/kdzhou/Downloads/NEST_1-Chiao/NEST_1-Chiao/WebA/WebA/Views/pays/pays_student.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NccGF5c1xwYXlzX3N0dWRlbnQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/kdzhou/Downloads/NEST_1-Chiao/NEST_1-Chiao/WebA/WebA/Views/RollCallStudents/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUm9sbENhbGxTdHVkZW50c1xDcmVhdGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/kdzhou/Downloads/NEST_1-Chiao/NEST_1-Chiao/WebA/WebA/Views/RollCallStudents/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUm9sbENhbGxTdHVkZW50c1xEZWxldGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/kdzhou/Downloads/NEST_1-Chiao/NEST_1-Chiao/WebA/WebA/Views/RollCallStudents/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUm9sbENhbGxTdHVkZW50c1xEZXRhaWxzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/kdzhou/Downloads/NEST_1-Chiao/NEST_1-Chiao/WebA/WebA/Views/RollCallStudents/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUm9sbENhbGxTdHVkZW50c1xFZGl0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/kdzhou/Downloads/NEST_1-Chiao/NEST_1-Chiao/WebA/WebA/Views/RollCallStudents/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUm9sbENhbGxTdHVkZW50c1xJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/kdzhou/Downloads/NEST_1-Chiao/NEST_1-Chiao/WebA/WebA/Views/RollCallStudents/_RollCallTable.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUm9sbENhbGxTdHVkZW50c1xfUm9sbENhbGxUYWJsZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/kdzhou/Downloads/NEST_1-Chiao/NEST_1-Chiao/WebA/WebA/Views/Servers/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2VydmVyc1xDcmVhdGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/kdzhou/Downloads/NEST_1-Chiao/NEST_1-Chiao/WebA/WebA/Views/Servers/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2VydmVyc1xEZWxldGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/kdzhou/Downloads/NEST_1-Chiao/NEST_1-Chiao/WebA/WebA/Views/Servers/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2VydmVyc1xEZXRhaWxzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/kdzhou/Downloads/NEST_1-Chiao/NEST_1-Chiao/WebA/WebA/Views/Servers/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2VydmVyc1xFZGl0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/kdzhou/Downloads/NEST_1-Chiao/NEST_1-Chiao/WebA/WebA/Views/Servers/servers_housemaster.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2VydmVyc1xzZXJ2ZXJzX2hvdXNlbWFzdGVyLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/kdzhou/Downloads/NEST_1-Chiao/NEST_1-Chiao/WebA/WebA/Views/Servers/servers_student.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2VydmVyc1xzZXJ2ZXJzX3N0dWRlbnQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/kdzhou/Downloads/NEST_1-Chiao/NEST_1-Chiao/WebA/WebA/Views/Shared/Error.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEVycm9yLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/kdzhou/Downloads/NEST_1-Chiao/NEST_1-Chiao/WebA/WebA/Views/Shared/_ValidationScriptsPartial.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/kdzhou/Downloads/NEST_1-Chiao/NEST_1-Chiao/WebA/WebA/Views/sues/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3Ncc3Vlc1xDcmVhdGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/kdzhou/Downloads/NEST_1-Chiao/NEST_1-Chiao/WebA/WebA/Views/sues/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3Ncc3Vlc1xEZWxldGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/kdzhou/Downloads/NEST_1-Chiao/NEST_1-Chiao/WebA/WebA/Views/sues/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3Ncc3Vlc1xEZXRhaWxzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/kdzhou/Downloads/NEST_1-Chiao/NEST_1-Chiao/WebA/WebA/Views/sues/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3Ncc3Vlc1xFZGl0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/kdzhou/Downloads/NEST_1-Chiao/NEST_1-Chiao/WebA/WebA/Views/sues/sues_housemaster.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3Ncc3Vlc1xzdWVzX2hvdXNlbWFzdGVyLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/kdzhou/Downloads/NEST_1-Chiao/NEST_1-Chiao/WebA/WebA/Views/sues/sues_student.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3Ncc3Vlc1xzdWVzX3N0dWRlbnQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/kdzhou/Downloads/NEST_1-Chiao/NEST_1-Chiao/WebA/WebA/Views/_ViewImports.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/kdzhou/Downloads/NEST_1-Chiao/NEST_1-Chiao/WebA/WebA/Views/_ViewStart.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdTdGFydC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/kdzhou/Downloads/NEST_1-Chiao/NEST_1-Chiao/WebA/WebA/Views/Shared/_Layout.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYXlvdXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = b-h7s1egi2vk

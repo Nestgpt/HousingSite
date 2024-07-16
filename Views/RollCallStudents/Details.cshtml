@@ -1,0 +1,30 @@
+﻿@model WebA.Models.RollcallStudent // 指定視圖的模型為 NEST_5.Models 命名空間下的 RollcallStudent
+
+@{
+    ViewData["Title"] = "Details"; // 設置視圖的標題為 "Details"
+}
+
+<h1>Details</h1> <!-- 頁面標題 -->
+
+<div>
+    <h4>RollCallStudent</h4> <!-- 小標題，表示 RollCallStudent 的詳細信息部分 -->
+    <hr /> <!-- 水平分隔線 -->
+    <dl class="row">
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Rollcall) 
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Rollcall) 
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Datetime) 
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Datetime) 
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-action="Edit" asp-route-id="@Model?.RollcallId">Edit</a> <!-- 連結到當前 RollcallStudent 的編輯頁面，傳遞 RollcallId 作為路由參數 -->
+    <a asp-action="Index">Back to List</a> <!-- 連結回到 RollcallStudent 的列表頁面 -->
+</div>
